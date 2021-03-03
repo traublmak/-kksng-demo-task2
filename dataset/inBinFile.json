@@ -1,0 +1,19 @@
+{
+	"name": "inBinFile",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "InHttpServer",
+			"type": "LinkedServiceReference",
+			"parameters": {
+				"url": "@dataset().url"
+			}
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "HttpServerLocation"
+			}
+		}
+	}
+}
