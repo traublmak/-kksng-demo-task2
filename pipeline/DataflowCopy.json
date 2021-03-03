@@ -37,7 +37,10 @@
 				"inputs": [
 					{
 						"referenceName": "inBinFile",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"url": "@pipeline().parameters.url"
+						}
 					}
 				],
 				"outputs": [
