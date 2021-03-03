@@ -19,7 +19,7 @@
 					"value": "@dataset().sourceFolder",
 					"type": "Expression"
 				},
-				"container": "test"
+				"container": "outputblob"
 			},
 			"columnDelimiter": "\t",
 			"encodingName": "WINDOWS-1251",
