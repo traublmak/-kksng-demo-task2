@@ -15,6 +15,10 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
+				"folderPath": {
+					"value": "@dataset().sourceFolder",
+					"type": "Expression"
+				},
 				"container": "test"
 			},
 			"columnDelimiter": "\t",
