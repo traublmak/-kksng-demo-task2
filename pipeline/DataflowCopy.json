@@ -46,7 +46,13 @@
 				"outputs": [
 					{
 						"referenceName": "outBinaryBlob",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"destFolder": {
+								"value": "@pipeline().RunId",
+								"type": "Expression"
+							}
+						}
 					}
 				]
 			},
