@@ -8,6 +8,11 @@
 				"url": "@dataset().url"
 			}
 		},
+		"parameters": {
+			"url": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "Binary",
 		"typeProperties": {
