@@ -78,7 +78,15 @@
 				"typeProperties": {
 					"dataflow": {
 						"referenceName": "Trasformation",
-						"type": "DataFlowReference"
+						"type": "DataFlowReference",
+						"datasetParameters": {
+							"source1": {
+								"sourceFolder": {
+									"value": "@pipeline().RunId",
+									"type": "Expression"
+								}
+							}
+						}
 					},
 					"compute": {
 						"coreCount": 8,
