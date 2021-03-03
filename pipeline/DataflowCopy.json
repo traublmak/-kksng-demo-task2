@@ -79,6 +79,11 @@
 				}
 			}
 		],
+		"parameters": {
+			"url": {
+				"type": "string"
+			}
+		},
 		"annotations": []
 	}
 }
