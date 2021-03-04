@@ -22,7 +22,7 @@
 				"container": "outputblob"
 			},
 			"compression": {
-				"type": "TarGZip"
+				"type": "tar"
 			}
 		}
 	}
