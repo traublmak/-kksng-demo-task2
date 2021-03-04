@@ -26,7 +26,7 @@
 					"name": "DerivedColumn1"
 				}
 			],
-			"script": "source(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: true,\n\tfileList: true,\n\tformat: 'delimited',\n\tcontainer: 'outputblob',\n\tfolderPath: 'bc6f661b-7bde-4694-b632-9c01e374d33c',\n\tfileName: 'data_9b7fb8f7-86cd-44a7-93ac-70131c08a8e5_c784840f-a478-47ab-82e8-494b3c034d97.txt',\n\tcolumnDelimiter: '\\t',\n\tescapeChar: '\\\\',\n\tqutoChar: '\\\"',\n\tencodingName: 'WINDOWS-1251',\n\tcolumnNamesAsHeader: false) ~> sourceOfTxt\nsourceOfTxt derive(each(match(name == 'END_QNTY'), $$ = toFloat($$))) ~> DerivedColumn1\nDerivedColumn1 sink(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tformat: 'parquet') ~> sink1"
+			"script": "source(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: true,\n\tformat: 'delimited',\n\tcontainer: 'outputblob',\n\tfolderPath: 'bc6f661b-7bde-4694-b632-9c01e374d33c',\n\tfileName: 'data_9b7fb8f7-86cd-44a7-93ac-70131c08a8e5_c784840f-a478-47ab-82e8-494b3c034d97.txt',\n\tcolumnDelimiter: '\\t',\n\tescapeChar: '\\\\',\n\tqutoChar: '\\\"',\n\tencodingName: 'WINDOWS-1251',\n\tcolumnNamesAsHeader: true) ~> sourceOfTxt\nsourceOfTxt derive(each(match(name == 'END_QNTY'), $$ = toFloat($$))) ~> DerivedColumn1\nDerivedColumn1 sink(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tformat: 'parquet') ~> sink1"
 		}
 	}
 }
