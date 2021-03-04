@@ -20,6 +20,9 @@
 					"type": "Expression"
 				},
 				"container": "outputblob"
+			},
+			"compression": {
+				"type": "TarGZip"
 			}
 		}
 	}
