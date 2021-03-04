@@ -32,7 +32,8 @@
 					"sink": {
 						"type": "BinarySink",
 						"storeSettings": {
-							"type": "AzureBlobStorageWriteSettings"
+							"type": "AzureBlobStorageWriteSettings",
+							"copyBehavior": "FlattenHierarchy"
 						}
 					},
 					"enableStaging": false
@@ -81,15 +82,7 @@
 				"typeProperties": {
 					"dataflow": {
 						"referenceName": "Trasformation",
-						"type": "DataFlowReference",
-						"datasetParameters": {
-							"source1": {
-								"sourceFolder": {
-									"value": "@pipeline().RunId",
-									"type": "Expression"
-								}
-							}
-						}
+						"type": "DataFlowReference"
 					},
 					"compute": {
 						"coreCount": 8,
