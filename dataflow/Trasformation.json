@@ -22,7 +22,7 @@
 				}
 			],
 			"transformations": [],
-			"script": "parameters{\n\tfolder as string\n}\nsource(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false,\n\tformat: 'delimited',\n\tcontainer: 'outputblob',\n\tfolderPath: ($folder),\n\tfileName: '*.txt',\n\tcolumnDelimiter: '\\t',\n\tescapeChar: '\\\\',\n\tqutoChar: '\\\"',\n\tencodingName: 'WINDOWS-1251',\n\tcolumnNamesAsHeader: false) ~> sourceOfTxt\nsourceOfTxt sink(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tformat: 'parquet') ~> sink1"
+			"script": "parameters{\n\tfolder as string\n}\nsource(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false,\n\tfileList: true,\n\tformat: 'delimited',\n\tcontainer: 'outputblob',\n\tfolderPath: ($folder),\n\tfileName: '*.txt',\n\tcolumnDelimiter: '\\t',\n\tescapeChar: '\\\\',\n\tqutoChar: '\\\"',\n\tencodingName: 'WINDOWS-1251',\n\tcolumnNamesAsHeader: false) ~> sourceOfTxt\nsourceOfTxt sink(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tformat: 'parquet') ~> sink1"
 		}
 	}
 }
