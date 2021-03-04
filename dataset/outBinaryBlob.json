@@ -20,9 +20,6 @@
 					"type": "Expression"
 				},
 				"container": "outputblob"
-			},
-			"compression": {
-				"type": "tar"
 			}
 		}
 	}
