@@ -1,0 +1,20 @@
+{
+	"name": "dataflow1",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"linkedService": {
+						"referenceName": "AzureBlobStorage1",
+						"type": "LinkedServiceReference"
+					},
+					"name": "sourceNew"
+				}
+			],
+			"sinks": [],
+			"transformations": [],
+			"script": "source(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false,\n\tformat: 'delimited',\n\tcontainer: 'outputblob',\n\tfolderPath: 'bc6f661b-7bde-4694-b632-9c01e374d33c',\n\tfileName: 'data_9b7fb8f7-86cd-44a7-93ac-70131c08a8e5_1a9e7460-4b3c-446c-972c-5b5c59425c73.txt',\n\tcolumnDelimiter: '\\t',\n\tescapeChar: '\\\\',\n\tqutoChar: '\\\"',\n\tencodingName: 'WINDOWS-1251',\n\tcolumnNamesAsHeader: true) ~> sourceNew"
+		}
+	}
+}
