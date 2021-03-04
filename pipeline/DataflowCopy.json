@@ -82,7 +82,13 @@
 				"typeProperties": {
 					"dataflow": {
 						"referenceName": "Trasformation",
-						"type": "DataFlowReference"
+						"type": "DataFlowReference",
+						"parameters": {
+							"folderTxtFiles": {
+								"value": "'@{pipeline().RunId}'",
+								"type": "Expression"
+							}
+						}
 					},
 					"compute": {
 						"coreCount": 8,
