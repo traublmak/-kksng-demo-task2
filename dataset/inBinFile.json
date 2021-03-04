@@ -18,6 +18,9 @@
 		"typeProperties": {
 			"location": {
 				"type": "HttpServerLocation"
+			},
+			"compression": {
+				"type": "TarGZip"
 			}
 		}
 	}
