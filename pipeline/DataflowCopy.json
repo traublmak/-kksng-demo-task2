@@ -23,7 +23,10 @@
 							"requestMethod": "GET"
 						},
 						"formatSettings": {
-							"type": "BinaryReadSettings"
+							"type": "BinaryReadSettings",
+							"compressionProperties": {
+								"type": "TarGZipReadSettings"
+							}
 						}
 					},
 					"sink": {
