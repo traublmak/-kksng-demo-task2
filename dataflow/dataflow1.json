@@ -26,7 +26,7 @@
 					"name": "DerivedColumn"
 				}
 			],
-			"script": "source(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false,\n\tformat: 'delimited',\n\tcontainer: 'outputblob',\n\tfileName: 'testDataset.csv',\n\tcolumnDelimiter: ',',\n\tescapeChar: '\\\\',\n\tqutoChar: '\\\"',\n\tencodingName: 'UTF-8',\n\tcolumnNamesAsHeader: true) ~> sourceNew\nsourceNew derive(id = ERROR_FUNCTION('')) ~> DerivedColumn\nDerivedColumn sink(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tformat: 'parquet',\n\ttruncate: true,\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true) ~> sink1"
+			"script": "source(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false,\n\tformat: 'delimited',\n\tcontainer: 'outputblob',\n\tfileName: 'testDataset.csv',\n\tcolumnDelimiter: ',',\n\tescapeChar: '\\\\',\n\tqutoChar: '\\\"',\n\tencodingName: 'UTF-8',\n\tcolumnNamesAsHeader: true) ~> sourceNew\nsourceNew derive(id = 11) ~> DerivedColumn\nDerivedColumn sink(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tformat: 'parquet',\n\ttruncate: true,\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true) ~> sink1"
 		}
 	}
 }
